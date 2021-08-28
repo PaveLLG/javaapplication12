@@ -14,7 +14,7 @@ public class JavaApplication12 {
 
 
         for (Box box: boxes) {
-            System.out.println(boxes);
+            System.out.println(box);
         }
 
 
