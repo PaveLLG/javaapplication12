@@ -1,3 +1,5 @@
+import java.util.Comparator;
+
 public class Box implements Comparable<Box> {
 
     private int a,b,c;
@@ -21,9 +23,18 @@ public class Box implements Comparable<Box> {
     }
 
     @Override
-    public int compareTo(Box rValue ) {
+    public int compareTo(Box rValue) {
         return volume()-rValue.volume();
     }
+
+    public class CompareByA implements Comparator<Box> {
+
+        @Override
+        public int compare(Box b1, Box b2) {
+            return b1.a - b2.a;
+        }
+    }
+
 }
 
 

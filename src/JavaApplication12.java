@@ -10,6 +10,7 @@ public class JavaApplication12 {
                 new Box(2,2,2)
         };
 
+        //по объему
         Arrays.sort(boxes);
 
 
@@ -17,6 +18,12 @@ public class JavaApplication12 {
             System.out.println(box);
         }
 
+        Box.CompareByA cmp = new Box(0,0,0).new CompareByA();
+        Arrays.sort(boxes, cmp);
+
+        for (Box box: boxes){
+            System.out.println(box);
+        }
 
     }
 
