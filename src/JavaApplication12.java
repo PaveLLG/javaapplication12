@@ -18,8 +18,15 @@ public class JavaApplication12 {
             System.out.println(box);
         }
 
-        Box.CompareByA cmp = new Box(0,0,0).new CompareByA();
-        Arrays.sort(boxes, cmp);
+//        Box.CompareByA cmp = new Box(0,0,0).new CompareByA();
+//        Arrays.sort(boxes, cmp);
+
+
+//        Arrays.sort(boxes, new Box.CompareByA());
+
+        // И Третий и четвертый метод
+        Arrays.sort(boxes, Box.compareByA());
+
 
         for (Box box: boxes){
             System.out.println(box);
