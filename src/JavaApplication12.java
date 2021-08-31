@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class JavaApplication12 {
 
@@ -24,8 +25,15 @@ public class JavaApplication12 {
 
 //        Arrays.sort(boxes, new Box.CompareByA());
 
-        // И Третий и четвертый метод
-        Arrays.sort(boxes, Box.compareByA());
+        // И Третий и четвертый вариант
+//        Arrays.sort(boxes, Box.compareByA());
+
+        Arrays.sort(boxes, new Comparator<Box>() {
+            @Override
+            public int compare(Box b1, Box b2) {
+                return b1.getA() - b2.getA();
+            }
+        });
 
 
         for (Box box: boxes){

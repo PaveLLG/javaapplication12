@@ -10,12 +10,16 @@ public class Box implements Comparable<Box> {
         this.c = c;
     }
 
+    public int getA() {
+        return a;
+    }
+
     @Override
     public String toString() {
         return "Box " +
-                "a=" + a +
-                ", b=" + b +
-                ", c=" + c ;
+                "a = " + a +
+                ", b = " + b +
+                ", c = " + c ;
     }
 
     public int volume(){
@@ -34,15 +38,33 @@ public class Box implements Comparable<Box> {
 //        }
 //    }
 
+
+    // третий вариант
+//    public static Comparator<Box> compareByA(){
+//        class CMP implements Comparator<Box>{
+//            @Override
+//            public int compare(Box b1, Box b2) {
+//                return b1.a - b2.a;
+//            }
+//        }
+//        return new  CMP();
+//    }
+
     public static Comparator<Box> compareByA(){
-        class CMP implements Comparator<Box>{
+        return new Comparator<Box>() {
+            {
+                //....
+            }
+
             @Override
             public int compare(Box b1, Box b2) {
                 return b1.a - b2.a;
             }
-        }
-        return new  CMP();
+
+        };
     }
+
+
 
 
     public static class CompareByA implements Comparator<Box> {
