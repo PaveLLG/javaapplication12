@@ -28,12 +28,16 @@ public class JavaApplication12 {
         // И Третий и четвертый вариант
 //        Arrays.sort(boxes, Box.compareByA());
 
-        Arrays.sort(boxes, new Comparator<Box>() {
-            @Override
-            public int compare(Box b1, Box b2) {
-                return b1.getA() - b2.getA();
-            }
-        });
+
+        // пятый вариант
+//        Arrays.sort(boxes, new Comparator<Box>() {
+//            @Override
+//            public int compare(Box b1, Box b2) {
+//                return b1.getA() - b2.getA();
+//            }
+//        });
+
+        Arrays.sort(boxes, (Box b1, Box b2) -> b1.getA() - b2.getA());
 
 
         for (Box box: boxes){
